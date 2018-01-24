@@ -6,11 +6,14 @@ package br.amber.database.util;
 
 public class Mount {
 
+    // Nomes das tabelas...
     public static final String TABELA_OCAMENTOS = "orcamentos";
     public static final String TABELA_TITULAR = "titular";
     public static final String TABELA_DEPENDENTE = "dependente";
-    public static final String TIPOS_DOCS = "tipo_docs";
+    public static final String TABELA_STATUS_OP = "status_op";
+    public static final String TABELA_TIPOS_DOCS = "tipo_docs";
 
+    // Colunas da tabela Orcamentos...
     public static final String COL_TB_O_ID = "id_orcamento";
     public static final String COL_TB_O_COD_CONS = "cod_cons";
     public static final String COL_TB_O_DT_STATUS = "dt_status";
@@ -27,6 +30,7 @@ public class Mount {
     public static final String COL_TB_O_TIPO_CONTRATO = "tipo_contrato";
     public static final String COL_TB_O_CPF_TITULAR = "cpf_titular";
 
+    // Colunas da Tabela Titular...
     public static final String COL_TB_T_ID = "id_titular";
     public static final String COL_TB_T_CPF = "cpf";
     public static final String COL_TB_T_RG = "rg";
@@ -46,7 +50,9 @@ public class Mount {
     public static final String COL_TB_T_TV = "tv";
     public static final String COL_TB_T_INTERNET = "internet";
     public static final String COL_TB_T_PK_ORCAMENTO = "pk_orcamento";
+    public static final String COL_TB_T_PK_CPF_TITULAR = "pk_cpf_titular";
 
+    // Colunas da Tabela Dependente...
     public static final String COL_TB_D_ID = "id_dependente";
     public static final String COL_TB_D_COD_DEPENDENTE = "cod_dependente";
     public static final String COL_TB_D_CPF = "cpf";
@@ -61,7 +67,17 @@ public class Mount {
     public static final String COL_TB_D_PASSAPORTE_CPF = "passaporte_cpf";
     public static final String COL_TB_D_RNE_CPF = "rne_cpf";
     public static final String COL_TB_D_PK_ORCAMENTO_TITULAR = "pk_orcamento_titular";
+    public static final String COL_TB_D_PK_CPF_TITULAR = "pk_cpf_titular";
 
+    // Colunas da Tabela Status Op...
+    public static final String COL_TB_ST_OP_ID = "id_status_op";
+    public static final String COL_TB_ST_OP_TIPO_ARQUIVO = "tipo_arquivo";
+    public static final String COL_TB_ST_OP_TIPO_USUARIO = "tipo_usuario";
+    public static final String COL_TB_ST_OP_STATUS = "status";
+    public static final String COL_TB_ST_OP_COD_ORCAMENTO = "cod_orcamento";
+    public static final String COL_TB_ST_OP_COD_USUARIO = "cod_usuario";
+
+    // Colunas da Tabela Tipos de documentos...
     public static final String COL_TB_DOCS_ID = "id_tipos_documentos";
     public static final String COL_TB_DOCS_CD_TIPO_DOCUMENTO = "cd_tipo_documento";
     public static final String COL_TB_DOCS_FL_TIPO_USUARIO = "fl_tipo_usuario";
@@ -108,7 +124,8 @@ public class Mount {
             COL_TB_T_TV + " TEXT, " +
             COL_TB_T_INTERNET + " TEXT, " +
             COL_TB_T_PK_ORCAMENTO + " TEXT, " +
-            "FOREIGN KEY (" + COL_TB_T_PK_ORCAMENTO + ") REFERENCES " + TABELA_OCAMENTOS + "(" + COL_TB_O_NU_ORCAMENTO + "));";
+            COL_TB_T_PK_CPF_TITULAR + " TEXT, " +
+            "FOREIGN KEY (" + COL_TB_T_PK_ORCAMENTO + ", " + COL_TB_T_PK_CPF_TITULAR + ") REFERENCES " + TABELA_OCAMENTOS + "(" + COL_TB_O_NU_ORCAMENTO + ", " + COL_TB_O_CPF_TITULAR + "));";
 
     public static final String CREATE_TABELA_DEPENDENTE = "CREATE TABLE " + TABELA_DEPENDENTE + "(" +
             COL_TB_D_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -125,10 +142,18 @@ public class Mount {
             COL_TB_D_PASSAPORTE_CPF + " TEXT, " +
             COL_TB_D_RNE_CPF + " TEXT, " +
             COL_TB_D_PK_ORCAMENTO_TITULAR + " TEXT, " +
-            "FOREIGN KEY (" + COL_TB_D_PK_ORCAMENTO_TITULAR + ") REFERENCES " + TABELA_TITULAR + "(" + COL_TB_T_PK_ORCAMENTO + "));";
+            COL_TB_D_PK_CPF_TITULAR + " TEXT, " +
+            "FOREIGN KEY (" + COL_TB_D_PK_ORCAMENTO_TITULAR + ", " + COL_TB_D_PK_CPF_TITULAR + ") REFERENCES " + TABELA_TITULAR + "(" + COL_TB_T_PK_ORCAMENTO + ", " + COL_TB_T_PK_CPF_TITULAR + "));";
 
+    public static final String CREATE_TABELA_STATUS_OP = "CREATE TABLE " + TABELA_STATUS_OP + "(" +
+            COL_TB_ST_OP_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            COL_TB_ST_OP_TIPO_ARQUIVO + " TEXT, " +
+            COL_TB_ST_OP_TIPO_USUARIO + " TEXT, " +
+            COL_TB_ST_OP_STATUS + " TEXT, " +
+            COL_TB_ST_OP_COD_ORCAMENTO + " TEXT, " +
+            COL_TB_ST_OP_COD_USUARIO + " TEXT);";
 
-    public static final String CREATE_TABELA_TIPOS_DOCS = "CREATE TABLE " + TIPOS_DOCS + "(" +
+    public static final String CREATE_TABELA_TIPOS_DOCS = "CREATE TABLE " + TABELA_TIPOS_DOCS + "(" +
             COL_TB_DOCS_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             COL_TB_DOCS_CD_TIPO_DOCUMENTO + " TEXT, " +
             COL_TB_DOCS_FL_TIPO_USUARIO + " TEXT, " +
