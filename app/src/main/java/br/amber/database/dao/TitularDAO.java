@@ -37,12 +37,13 @@ public class TitularDAO {
         values.put(Mount.COL_TB_T_PASSAPORTE_CPF, titular.getPassaporte_cpf());
         values.put(Mount.COL_TB_T_RNE_CPF, titular.getRne_cpf());
         values.put(Mount.COL_TB_T_AGUA, titular.getAgua());
-        values.put(Mount.COL_TB_T_LUZ, titular.getluz());
+        values.put(Mount.COL_TB_T_LUZ, titular.getLuz());
         values.put(Mount.COL_TB_T_TELEFONE, titular.getTelefone());
         values.put(Mount.COL_TB_T_CARTAO, titular.getCartao());
         values.put(Mount.COL_TB_T_TV, titular.getTv());
         values.put(Mount.COL_TB_T_INTERNET, titular.getInternet());
         values.put(Mount.COL_TB_T_PK_ORCAMENTO, titular.getPk_orcamento());
+        values.put(Mount.COL_TB_T_PK_CPF_TITULAR, titular.getPk_cpf_titular());
 
         long id = db.insert(Mount.TABELA_TITULAR, null, values);
         db.close();
