@@ -25,7 +25,7 @@ public class OrcamentosDAO {
         this.db = this.helper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(Mount.COL_TB_O_DT_STATUS, orcamento.getCod_cons());
+        values.put(Mount.COL_TB_O_COD_CONS, orcamento.getCod_cons());
         values.put(Mount.COL_TB_O_DT_STATUS, orcamento.getDt_status());
         values.put(Mount.COL_TB_O_DS_SENHA_SMS, orcamento.getDs_senha_sms());
         values.put(Mount.COL_TB_O_CD_VENDEDOR, orcamento.getCd_vendedor());
