@@ -2,6 +2,7 @@ package br.amber.database.util;
 
 import br.amber.database.entity.DependentePojo;
 import br.amber.database.entity.OrcamentoPojo;
+import br.amber.database.entity.StatusPojo;
 import br.amber.database.entity.TiposDocumentosPojo;
 import br.amber.database.entity.TitularPojo;
 
@@ -27,7 +28,7 @@ public class Inserts {
                 "332850720",
                 "LUCAS RODRIGUES",
                 "1",
-                "332850456"
+                "01301401566"
         );
 
         return orcamento;
@@ -53,7 +54,8 @@ public class Inserts {
                 "foto.png",
                 "",
                 "foto.png",
-                "332850720"
+                "332850720",
+                "01301401566"
         );
 
         return titularPojo;
@@ -74,10 +76,24 @@ public class Inserts {
                 "foto.png",
                 "foto.png",
                 "foto.png",
-                "332850719"
+                "332850719",
+                "01301401566"
         );
 
         return dependentePojo;
+    }
+
+    public static StatusPojo getStatus(){
+
+        StatusPojo statusPojo = new StatusPojo(
+                "cpf",
+                "titular",
+                "on",
+                "332850720",
+                "123456"
+        );
+
+        return statusPojo;
     }
 
     public static TiposDocumentosPojo getTiposDocumento(){
