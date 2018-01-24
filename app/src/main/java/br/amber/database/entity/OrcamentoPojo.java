@@ -6,6 +6,7 @@ package br.amber.database.entity;
 
 public class OrcamentoPojo {
 
+    private String cod_cons;
     private String dt_status;
     private String ds_senha_sms;
     private String cd_vendedor;
@@ -20,7 +21,8 @@ public class OrcamentoPojo {
     private String tipo_contrato;
     private String cpf_titular;
 
-    public OrcamentoPojo(String dt_status, String ds_senha_sms, String cd_vendedor, String dt_inicio, String fl_status, String ds_erro, String nu_controle, String dt_digitacao, String nm_vendedor, String nu_orcamento, String nm_usuario, String tipo_contrato, String cpf_titular) {
+    public OrcamentoPojo(String cod_cons, String dt_status, String ds_senha_sms, String cd_vendedor, String dt_inicio, String fl_status, String ds_erro, String nu_controle, String dt_digitacao, String nm_vendedor, String nu_orcamento, String nm_usuario, String tipo_contrato, String cpf_titular) {
+        this.cod_cons = cod_cons;
         this.dt_status = dt_status;
         this.ds_senha_sms = ds_senha_sms;
         this.cd_vendedor = cd_vendedor;
@@ -34,6 +36,14 @@ public class OrcamentoPojo {
         this.nm_usuario = nm_usuario;
         this.tipo_contrato = tipo_contrato;
         this.cpf_titular = cpf_titular;
+    }
+
+    public String getCod_cons() {
+        return cod_cons;
+    }
+
+    public void setCod_cons(String cod_cons) {
+        this.cod_cons = cod_cons;
     }
 
     public String getDt_status() {
