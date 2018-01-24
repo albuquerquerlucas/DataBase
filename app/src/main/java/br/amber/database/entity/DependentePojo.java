@@ -19,8 +19,9 @@ public class DependentePojo {
     private String passaporte_cpf;
     private String rne_cpf;
     private String pk_orcamento_titular;
+    private String pk_cpf_titular;
 
-    public DependentePojo(String cod_dependente, String cpf, String rg, String cnh, String ctps, String passaporte, String rne, String rg_cpf, String cnh_cpf, String ctps_cpf, String passaporte_cpf, String rne_cpf, String pk_orcamento_titular) {
+    public DependentePojo(String cod_dependente, String cpf, String rg, String cnh, String ctps, String passaporte, String rne, String rg_cpf, String cnh_cpf, String ctps_cpf, String passaporte_cpf, String rne_cpf, String pk_orcamento_titular, String pk_cpf_titular) {
         this.cod_dependente = cod_dependente;
         this.cpf = cpf;
         this.rg = rg;
@@ -34,6 +35,7 @@ public class DependentePojo {
         this.passaporte_cpf = passaporte_cpf;
         this.rne_cpf = rne_cpf;
         this.pk_orcamento_titular = pk_orcamento_titular;
+        this.pk_cpf_titular = pk_cpf_titular;
     }
 
     public String getCod_dependente() {
@@ -138,5 +140,13 @@ public class DependentePojo {
 
     public void setPk_orcamento_titular(String pk_orcamento_titular) {
         this.pk_orcamento_titular = pk_orcamento_titular;
+    }
+
+    public String getPk_cpf_titular() {
+        return pk_cpf_titular;
+    }
+
+    public void setPk_cpf_titular(String pk_cpf_titular) {
+        this.pk_cpf_titular = pk_cpf_titular;
     }
 }
