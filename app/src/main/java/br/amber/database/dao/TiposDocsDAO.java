@@ -33,7 +33,7 @@ public class TiposDocsDAO {
         values.put(Mount.COL_TB_DOCS_FL_CPF, tipos.getFl_cpf());
         values.put(Mount.COL_TB_DOCS_Ds_ERRO, tipos.getDs_erro());
 
-        long id = db.insert(Mount.CREATE_TABELA_TIPOS_DOCS, null, values);
+        long id = db.insert(Mount.TABELA_TIPOS_DOCS, null, values);
         db.close();
         return id;
     }
