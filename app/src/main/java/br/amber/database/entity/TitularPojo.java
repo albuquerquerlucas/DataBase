@@ -24,8 +24,9 @@ public class TitularPojo {
     private String tv;
     private String internet;
     private String pk_orcamento;
+    private String pk_cpf_titular;
 
-    public TitularPojo(String cpf, String rg, String cnh, String ctps, String passaporte, String rne, String rg_cpf, String cnh_cpf, String ctps_cpf, String passaporte_cpf, String rne_cpf, String agua, String luz, String telefone, String cartao, String tv, String internet, String pk_orcamento) {
+    public TitularPojo(String cpf, String rg, String cnh, String ctps, String passaporte, String rne, String rg_cpf, String cnh_cpf, String ctps_cpf, String passaporte_cpf, String rne_cpf, String agua, String luz, String telefone, String cartao, String tv, String internet, String pk_orcamento, String pk_cpf_titular) {
         this.cpf = cpf;
         this.rg = rg;
         this.cnh = cnh;
@@ -44,6 +45,7 @@ public class TitularPojo {
         this.tv = tv;
         this.internet = internet;
         this.pk_orcamento = pk_orcamento;
+        this.pk_cpf_titular = pk_cpf_titular;
     }
 
     public String getCpf() {
@@ -142,11 +144,11 @@ public class TitularPojo {
         this.agua = agua;
     }
 
-    public String getluz() {
+    public String getLuz() {
         return luz;
     }
 
-    public void setluz(String luz) {
+    public void setLuz(String luz) {
         this.luz = luz;
     }
 
@@ -188,5 +190,13 @@ public class TitularPojo {
 
     public void setPk_orcamento(String pk_orcamento) {
         this.pk_orcamento = pk_orcamento;
+    }
+
+    public String getPk_cpf_titular() {
+        return pk_cpf_titular;
+    }
+
+    public void setPk_cpf_titular(String pk_cpf_titular) {
+        this.pk_cpf_titular = pk_cpf_titular;
     }
 }
