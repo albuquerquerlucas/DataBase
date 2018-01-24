@@ -25,6 +25,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(Mount.CREATE_TABELA_ORCAMENTOS);
         db.execSQL(Mount.CREATE_TABELA_TITULAR);
         db.execSQL(Mount.CREATE_TABELA_DEPENDENTE);
+        db.execSQL(Mount.CREATE_TABELA_STATUS_OP);
         db.execSQL(Mount.CREATE_TABELA_TIPOS_DOCS);
     }
 
@@ -34,6 +35,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + Mount.TABELA_OCAMENTOS);
         db.execSQL("DROP TABLE IF EXISTS " + Mount.TABELA_TITULAR);
         db.execSQL("DROP TABLE IF EXISTS " + Mount.TABELA_DEPENDENTE);
-        db.execSQL("DROP TABLE IF EXISTS " + Mount.TIPOS_DOCS);
+        db.execSQL("DROP TABLE IF EXISTS " + Mount.TABELA_STATUS_OP);
+        db.execSQL("DROP TABLE IF EXISTS " + Mount.TABELA_TIPOS_DOCS);
     }
 }
