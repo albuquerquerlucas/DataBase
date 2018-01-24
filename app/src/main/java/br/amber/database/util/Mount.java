@@ -12,6 +12,7 @@ public class Mount {
     public static final String TIPOS_DOCS = "tipo_docs";
 
     public static final String COL_TB_O_ID = "id_orcamento";
+    public static final String COL_TB_O_COD_CONS = "cod_cons";
     public static final String COL_TB_O_DT_STATUS = "dt_status";
     public static final String COL_TB_O_DS_SENHA_SMS = "ds_senha_sms";
     public static final String COL_TB_O_CD_VENDEDOR = "cd_vendedor";
@@ -72,6 +73,7 @@ public class Mount {
 
     public static final String CREATE_TABELA_ORCAMENTOS = "CREATE TABLE " + TABELA_OCAMENTOS + "(" +
             COL_TB_O_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            COL_TB_O_COD_CONS + " TEXT, " +
             COL_TB_O_DT_STATUS + " TEXT, " +
             COL_TB_O_DS_SENHA_SMS + " TEXT, " +
             COL_TB_O_CD_VENDEDOR + " TEXT, " +
