@@ -6,6 +6,7 @@ package br.amber.database.entity;
 
 public class TitularPojo {
 
+    private String cpf_titular;
     private String cpf;
     private String rg;
     private String cnh;
@@ -25,12 +26,12 @@ public class TitularPojo {
     private String internet;
     private String st_envio;
     private String pk_orcamento;
-    private String pk_cpf_titular;
 
-    public TitularPojo(String cpf, String rg, String cnh, String ctps, String passaporte, String rne, String rg_cpf,
+    public TitularPojo(String cpf_titular, String cpf, String rg, String cnh, String ctps, String passaporte, String rne, String rg_cpf,
                        String cnh_cpf, String ctps_cpf, String passaporte_cpf, String rne_cpf, String agua,
-                       String luz, String telefone, String cartao, String tv, String internet, String st_envio, String pk_orcamento,
-                       String pk_cpf_titular) {
+                       String luz, String telefone, String cartao, String tv, String internet, String st_envio, String pk_orcamento) {
+
+        this.cpf_titular = cpf_titular;
         this.cpf = cpf;
         this.rg = rg;
         this.cnh = cnh;
@@ -50,7 +51,14 @@ public class TitularPojo {
         this.internet = internet;
         this.st_envio = st_envio;
         this.pk_orcamento = pk_orcamento;
-        this.pk_cpf_titular = pk_cpf_titular;
+    }
+
+    public String getCpf_titular() {
+        return cpf_titular;
+    }
+
+    public void setCpf_titular(String cpf_titular) {
+        this.cpf_titular = cpf_titular;
     }
 
     public String getCpf() {
@@ -203,13 +211,5 @@ public class TitularPojo {
 
     public void setPk_orcamento(String pk_orcamento) {
         this.pk_orcamento = pk_orcamento;
-    }
-
-    public String getPk_cpf_titular() {
-        return pk_cpf_titular;
-    }
-
-    public void setPk_cpf_titular(String pk_cpf_titular) {
-        this.pk_cpf_titular = pk_cpf_titular;
     }
 }
