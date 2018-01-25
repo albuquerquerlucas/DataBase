@@ -39,7 +39,6 @@ public class DependenteDAO {
         values.put(Mount.COL_TB_D_RNE_CPF, dependente.getRne_cpf());
         values.put(Mount.COL_TB_D_STATUS_ENVIO, dependente.getSt_envio());
         values.put(Mount.COL_TB_D_PK_ORCAMENTO_TITULAR, dependente.getPk_orcamento_titular());
-        values.put(Mount.COL_TB_D_PK_CPF_TITULAR, dependente.getPk_cpf_titular());
 
         long id = db.insert(Mount.TABELA_DEPENDENTE, null, values);
         db.close();
