@@ -15,7 +15,7 @@ public class Inserts {
     public static OrcamentoPojo getOrcamento(){
 
         OrcamentoPojo orcamento = new OrcamentoPojo(
-                "1000",
+                "0001",
                 "22/01/2018",
                 "TQBQSGDF",
                 "14486",
@@ -25,10 +25,10 @@ public class Inserts {
                 "17159716",
                 "22/01/2018",
                 "TODOS PROMARKET/CAR",
-                "332850720",
+                "332850750",
                 "LUCAS RODRIGUES",
                 "1",
-                "01301401566"
+                "00100200345"
         );
 
         return orcamento;
@@ -37,26 +37,26 @@ public class Inserts {
     public static TitularPojo getTitular(){
 
         TitularPojo titularPojo = new TitularPojo(
+                "00100200345",
+                "",
+                "foto.png",
+                "foto.png",
                 "foto.png",
                 "",
                 "foto.png",
-                "",
+                "foto.png",
+                "foto.png",
                 "foto.png",
                 "",
-                "foto.png",
-                "",
                 "",
                 "foto.png",
-                "",
-                "foto.png",
-                "",
                 "foto.png",
                 "foto.png",
                 "",
                 "foto.png",
                 "enviado",
-                "332850720",
-                "01301401566"
+                "enviado",
+                "332850750"
         );
 
         return titularPojo;
@@ -78,8 +78,7 @@ public class Inserts {
                 "foto.png",
                 "foto.png",
                 "não enviado",
-                "332850719",
-                "01301401566"
+                "332850750"
         );
 
         return dependentePojo;
@@ -91,8 +90,8 @@ public class Inserts {
                 "cpf",
                 "titular",
                 "on",
-                "332850720",
-                "123456"
+                "332850750",
+                "00100200345"
         );
 
         return statusPojo;
