@@ -42,6 +42,7 @@ public class TitularDAO {
         values.put(Mount.COL_TB_T_CARTAO, titular.getCartao());
         values.put(Mount.COL_TB_T_TV, titular.getTv());
         values.put(Mount.COL_TB_T_INTERNET, titular.getInternet());
+        values.put(Mount.COL_TB_T_STATUS_ENVIO, titular.getSt_envio());
         values.put(Mount.COL_TB_T_PK_ORCAMENTO, titular.getPk_orcamento());
         values.put(Mount.COL_TB_T_PK_CPF_TITULAR, titular.getPk_cpf_titular());
 
