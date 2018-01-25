@@ -23,10 +23,14 @@ public class TitularPojo {
     private String cartao;
     private String tv;
     private String internet;
+    private String st_envio;
     private String pk_orcamento;
     private String pk_cpf_titular;
 
-    public TitularPojo(String cpf, String rg, String cnh, String ctps, String passaporte, String rne, String rg_cpf, String cnh_cpf, String ctps_cpf, String passaporte_cpf, String rne_cpf, String agua, String luz, String telefone, String cartao, String tv, String internet, String pk_orcamento, String pk_cpf_titular) {
+    public TitularPojo(String cpf, String rg, String cnh, String ctps, String passaporte, String rne, String rg_cpf,
+                       String cnh_cpf, String ctps_cpf, String passaporte_cpf, String rne_cpf, String agua,
+                       String luz, String telefone, String cartao, String tv, String internet, String st_envio, String pk_orcamento,
+                       String pk_cpf_titular) {
         this.cpf = cpf;
         this.rg = rg;
         this.cnh = cnh;
@@ -44,6 +48,7 @@ public class TitularPojo {
         this.cartao = cartao;
         this.tv = tv;
         this.internet = internet;
+        this.st_envio = st_envio;
         this.pk_orcamento = pk_orcamento;
         this.pk_cpf_titular = pk_cpf_titular;
     }
@@ -182,6 +187,14 @@ public class TitularPojo {
 
     public void setInternet(String internet) {
         this.internet = internet;
+    }
+
+    public String getSt_envio() {
+        return st_envio;
+    }
+
+    public void setSt_envio(String st_envio) {
+        this.st_envio = st_envio;
     }
 
     public String getPk_orcamento() {
