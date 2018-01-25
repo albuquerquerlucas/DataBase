@@ -32,6 +32,7 @@ public class Mount {
 
     // Colunas da Tabela Titular...
     public static final String COL_TB_T_ID = "id_titular";
+    public static final String COL_TB_T_CPF_TITULAR = "cpf_titular";
     public static final String COL_TB_T_CPF = "cpf";
     public static final String COL_TB_T_RG = "rg";
     public static final String COL_TB_T_CNH = "cnh";
@@ -51,7 +52,6 @@ public class Mount {
     public static final String COL_TB_T_INTERNET = "internet";
     public static final String COL_TB_T_STATUS_ENVIO = "st_envio";
     public static final String COL_TB_T_PK_ORCAMENTO = "pk_orcamento";
-    public static final String COL_TB_T_PK_CPF_TITULAR = "pk_cpf_titular";
 
     // Colunas da Tabela Dependente...
     public static final String COL_TB_D_ID = "id_dependente";
@@ -69,7 +69,6 @@ public class Mount {
     public static final String COL_TB_D_RNE_CPF = "rne_cpf";
     public static final String COL_TB_D_STATUS_ENVIO = "st_envio";
     public static final String COL_TB_D_PK_ORCAMENTO_TITULAR = "pk_orcamento_titular";
-    public static final String COL_TB_D_PK_CPF_TITULAR = "pk_cpf_titular";
 
     // Colunas da Tabela Status Op...
     public static final String COL_TB_ST_OP_ID = "id_status_op";
@@ -108,6 +107,7 @@ public class Mount {
 
     public static final String CREATE_TABELA_TITULAR = "CREATE TABLE " + TABELA_TITULAR + "(" +
             COL_TB_T_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            COL_TB_T_CPF_TITULAR + " TEXT, " +
             COL_TB_T_CPF + " TEXT, " +
             COL_TB_T_RG + " TEXT, " +
             COL_TB_T_CNH + " TEXT, " +
@@ -127,8 +127,7 @@ public class Mount {
             COL_TB_T_INTERNET + " TEXT, " +
             COL_TB_T_STATUS_ENVIO + " TEXT, " +
             COL_TB_T_PK_ORCAMENTO + " TEXT, " +
-            COL_TB_T_PK_CPF_TITULAR + " TEXT, " +
-            "FOREIGN KEY (" + COL_TB_T_PK_ORCAMENTO + ", " + COL_TB_T_PK_CPF_TITULAR + ") REFERENCES " + TABELA_OCAMENTOS + "(" + COL_TB_O_NU_ORCAMENTO + ", " + COL_TB_O_CPF_TITULAR + "));";
+            "FOREIGN KEY (" + COL_TB_T_PK_ORCAMENTO + ") REFERENCES " + TABELA_OCAMENTOS + "(" + COL_TB_O_NU_ORCAMENTO + "));";
 
     public static final String CREATE_TABELA_DEPENDENTE = "CREATE TABLE " + TABELA_DEPENDENTE + "(" +
             COL_TB_D_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -146,8 +145,7 @@ public class Mount {
             COL_TB_D_RNE_CPF + " TEXT, " +
             COL_TB_D_STATUS_ENVIO + " TEXT, " +
             COL_TB_D_PK_ORCAMENTO_TITULAR + " TEXT, " +
-            COL_TB_D_PK_CPF_TITULAR + " TEXT, " +
-            "FOREIGN KEY (" + COL_TB_D_PK_ORCAMENTO_TITULAR + ", " + COL_TB_D_PK_CPF_TITULAR + ") REFERENCES " + TABELA_TITULAR + "(" + COL_TB_T_PK_ORCAMENTO + ", " + COL_TB_T_PK_CPF_TITULAR + "));";
+            "FOREIGN KEY (" + COL_TB_D_PK_ORCAMENTO_TITULAR + ") REFERENCES " + TABELA_TITULAR + "(" + COL_TB_T_PK_ORCAMENTO + "));";
 
     public static final String CREATE_TABELA_STATUS_OP = "CREATE TABLE " + TABELA_STATUS_OP + "(" +
             COL_TB_ST_OP_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
