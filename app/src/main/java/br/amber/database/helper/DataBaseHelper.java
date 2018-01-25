@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.io.File;
+import java.io.IOException;
+
 import br.amber.database.util.Mount;
 
 /**
@@ -37,5 +40,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + Mount.TABELA_DEPENDENTE);
         db.execSQL("DROP TABLE IF EXISTS " + Mount.TABELA_STATUS_OP);
         db.execSQL("DROP TABLE IF EXISTS " + Mount.TABELA_TIPOS_DOCS);
+    }
+
+    public static void deleteFiles(String path) {
+
+        File file = new File(path);
+
+        if (file.exists()) {
+            String deleteCmd = "rm -r " + path;
+            Runtime runtime = Runtime.getRuntime();
+            try {
+                runtime.exec(deleteCmd);
+            } catch (IOException e) { }
+        }
     }
 }
