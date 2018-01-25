@@ -54,6 +54,7 @@ public class Inserts {
                 "foto.png",
                 "",
                 "foto.png",
+                "enviado",
                 "332850720",
                 "01301401566"
         );
@@ -76,6 +77,7 @@ public class Inserts {
                 "foto.png",
                 "foto.png",
                 "foto.png",
+                "não enviado",
                 "332850719",
                 "01301401566"
         );
