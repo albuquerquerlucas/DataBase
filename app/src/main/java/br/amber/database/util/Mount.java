@@ -49,6 +49,7 @@ public class Mount {
     public static final String COL_TB_T_CARTAO = "cartao";
     public static final String COL_TB_T_TV = "tv";
     public static final String COL_TB_T_INTERNET = "internet";
+    public static final String COL_TB_T_STATUS_ENVIO = "st_envio";
     public static final String COL_TB_T_PK_ORCAMENTO = "pk_orcamento";
     public static final String COL_TB_T_PK_CPF_TITULAR = "pk_cpf_titular";
 
@@ -66,6 +67,7 @@ public class Mount {
     public static final String COL_TB_D_CTPS_CPF = "ctps_cpf";
     public static final String COL_TB_D_PASSAPORTE_CPF = "passaporte_cpf";
     public static final String COL_TB_D_RNE_CPF = "rne_cpf";
+    public static final String COL_TB_D_STATUS_ENVIO = "st_envio";
     public static final String COL_TB_D_PK_ORCAMENTO_TITULAR = "pk_orcamento_titular";
     public static final String COL_TB_D_PK_CPF_TITULAR = "pk_cpf_titular";
 
@@ -123,6 +125,7 @@ public class Mount {
             COL_TB_T_CARTAO + " TEXT, " +
             COL_TB_T_TV + " TEXT, " +
             COL_TB_T_INTERNET + " TEXT, " +
+            COL_TB_T_STATUS_ENVIO + " TEXT, " +
             COL_TB_T_PK_ORCAMENTO + " TEXT, " +
             COL_TB_T_PK_CPF_TITULAR + " TEXT, " +
             "FOREIGN KEY (" + COL_TB_T_PK_ORCAMENTO + ", " + COL_TB_T_PK_CPF_TITULAR + ") REFERENCES " + TABELA_OCAMENTOS + "(" + COL_TB_O_NU_ORCAMENTO + ", " + COL_TB_O_CPF_TITULAR + "));";
@@ -141,6 +144,7 @@ public class Mount {
             COL_TB_D_CTPS_CPF + " TEXT, " +
             COL_TB_D_PASSAPORTE_CPF + " TEXT, " +
             COL_TB_D_RNE_CPF + " TEXT, " +
+            COL_TB_D_STATUS_ENVIO + " TEXT, " +
             COL_TB_D_PK_ORCAMENTO_TITULAR + " TEXT, " +
             COL_TB_D_PK_CPF_TITULAR + " TEXT, " +
             "FOREIGN KEY (" + COL_TB_D_PK_ORCAMENTO_TITULAR + ", " + COL_TB_D_PK_CPF_TITULAR + ") REFERENCES " + TABELA_TITULAR + "(" + COL_TB_T_PK_ORCAMENTO + ", " + COL_TB_T_PK_CPF_TITULAR + "));";
